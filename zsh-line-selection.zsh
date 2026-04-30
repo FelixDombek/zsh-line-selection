@@ -53,3 +53,14 @@ smart-backward-delete() {
 }
 zle -N smart-backward-delete
 bindkey '^?' smart-backward-delete
+
+# ----- Typing overwrites active selection -----
+
+region-self-insert() {
+  if (( REGION_ACTIVE )); then
+    zle kill-region
+    MARK=''
+  fi
+  zle .self-insert
+}
+zle -N self-insert region-self-insert
