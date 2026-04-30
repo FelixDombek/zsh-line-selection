@@ -1,4 +1,4 @@
-# zle-selection.zsh
+# zsh-line-selection.zsh
 # Editor-like selection semantics for ZLE (emacs mode)
 
 # Only activate in emacs keymap
